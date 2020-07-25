@@ -156,12 +156,12 @@
      ```
 ## Сервер подписчика
 
-  - Редактируем файл postgresql.conf у pg-primary
+  - Редактируем файл postgresql.conf у pg-replic
         
      ```postgresql.conf
      wal_level = logical
       ```
- - Перезагружаем pg-primary
+ - Перезагружаем pg-replic
 
   - на сервер pg-replic создаем базу данных и таблицу
     
