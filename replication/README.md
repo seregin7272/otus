@@ -120,7 +120,7 @@
         conninfo              | user=replicator password=******** dbname=replication host=pg-primary port=5432 fallback_application_name=walreceiver sslmode=prefer sslcompression=0 gssencmode=prefer krbsrvname=postgres target_session_attrs=any
     ```
   
- # 2)Логическая репликация
+ # 2) Логическая репликация
   
   
  ## Настройка сервера публикатора
