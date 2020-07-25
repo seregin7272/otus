@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+  # Ведущий кластер
+  pg-primary:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: secret
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - 54321:5432
+    volumes:
+      - ~/docker/otus/postgres/data-primary:/var/lib/postgresql/
+  # Физическая реплика
+  pg-secondary:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: secret
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - 54322:5432
+    volumes:
+      - ~/docker/otus/postgres/data-secondary:/var/lib/postgresql/
+  # Для воспроизведения логической реплики
+  pg-replic:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: secret
+    ports:
+      - 54323:5432
+    volumes:
+      - ~/docker/otus/postgres/data-replic:/var/lib/postgresql/
