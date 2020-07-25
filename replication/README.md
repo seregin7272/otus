@@ -163,7 +163,7 @@
       ```
  - Перезагружаем pg-replic
 
-  - на сервер pg-replic создаем базу данных и таблицу
+  - На сервер pg-replic создаем базу данных и таблицу
     
      ```sh
     postgres=# CREATE DATABASE test;
