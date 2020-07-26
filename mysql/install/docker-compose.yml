@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  otusdb:
+    image: mysql:8.0.15
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+    command:
+      --init-file /init.sql
+    volumes:
+      - ~/docker/otus/mysql/data:/var/lib/mysql
+      - ./init.sql:/init.sql
+      - ./custom.conf:/etc/mysql/conf.d
+    expose:
+      - "33060"
+    ports:
+      - "33060:3306"
