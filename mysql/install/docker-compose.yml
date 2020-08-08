@@ -13,6 +13,7 @@ services:
 #      --init-file /init.sql
     volumes:
       - ~/docker/otus/mysql/data:/var/lib/mysql
+      - ./csv:/var/csv
       #- ./init.sql:/init.sql
       - ./custom.conf:/etc/mysql/conf.d
     ports:
