@@ -10,6 +10,11 @@
 *) реализовать загрузку через fifo
 
 
+### Транзакция
+
+Файл `transaction.sql`
+
+### Загрузка данных из csv
 
 Объеденяем в один файл файл `tmp_product_csv_import.csv`
 
@@ -17,11 +22,6 @@
 cat Apparel.csv Fashion.csv jewelry.csv SnowDevil.csv > tmp_product_csv_import.csv
 ```
 
-### Транзакция
-
-Файл `transaction.sql`
-
-### Загрузка данных из csv
 
 1) LOAD DATA
 
