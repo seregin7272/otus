@@ -28,7 +28,7 @@ image_src varchar(255),
 variant_image varchar(255)
 );
 
-LOAD DATA INFILE '/var/csv/Apparel.csv'
+LOAD DATA INFILE '/var/csv/tmp_product_csv_import.csv'
 	 INTO TABLE tmp_product_csv 
 	FIELDS TERMINATED BY ',' 
 	ENCLOSED BY '"'

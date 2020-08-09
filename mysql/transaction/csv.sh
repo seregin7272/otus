@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+cd /var/csv
+cat Apparel.csv Fashion.csv jewelry.csv SnowDevil.csv > tmp_product_csv_import.csv
 
 mysqlimport -d -L  -u root -psecret --ignore-lines=1 --lines-terminated-by='\n' --fields-terminated-by=','  --fields-enclosed-by='"' --verbose \
 -c handle,title,body,vendor,types,tags,published,option1_name,option1_value,option2_name,option2_value,option3_name,option3_value,\
